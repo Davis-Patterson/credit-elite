@@ -56,49 +56,51 @@ const Contact = ({ activeSection, darkMode }) => {
 
   return (
     <>
-      <div className='contact-container'>
-        <h1 className='title'>Contact Me</h1>
-        <hr className='contact-page-break' />
-        <div className='contact-content' id='contact-content'>
-          <form onSubmit={handleSubmit} className='contact-form'>
-            <p className='email-form-title'>Send me an email:</p>
-            <input
-              type='text'
-              name='user_name'
-              placeholder='Your Name'
-              value={form.user_name}
-              onChange={handleChange}
-              required
-              className='name-input'
-            />
-            <input
-              type='email'
-              name='user_email'
-              placeholder='Your Email'
-              value={form.user_email}
-              onChange={handleChange}
-              required
-              className='email-input'
-            />
-            <textarea
-              name='message'
-              placeholder='Your Message'
-              value={form.message}
-              onChange={handleChange}
-              required
-              className='message-input'
-            ></textarea>
-            {sending && <p className='sending'>Sending your email</p>}
-            {/* {error && (
+      <div className='page-container'>
+        <div className='contact-container'>
+          <h1 className='title'>CONTACT</h1>
+          <hr className='contact-page-break' />
+          <div className='contact-content' id='contact-content'>
+            <form onSubmit={handleSubmit} className='contact-form'>
+              <p className='email-form-title'>Send us an email:</p>
+              <input
+                type='text'
+                name='user_name'
+                placeholder='Your Name'
+                value={form.user_name}
+                onChange={handleChange}
+                required
+                className='name-input'
+              />
+              <input
+                type='email'
+                name='user_email'
+                placeholder='Your Email'
+                value={form.user_email}
+                onChange={handleChange}
+                required
+                className='email-input'
+              />
+              <textarea
+                name='message'
+                placeholder='Your Message'
+                value={form.message}
+                onChange={handleChange}
+                required
+                className='message-input'
+              ></textarea>
+              {sending && <p className='sending'>Sending your email</p>}
+              {/* {error && (
               <p className='error'>There was an error sending your email</p>
               )}
               {success && (
                 <p className='success'>Your Email was successfully sent!</p>
               )} */}
-            <button type='submit' className='submit-button'>
-              Send Email
-            </button>
-          </form>
+              <button type='submit' className='submit-button'>
+                Send Email
+              </button>
+            </form>
+          </div>
         </div>
         {/* <div className='gap' /> */}
       </div>
