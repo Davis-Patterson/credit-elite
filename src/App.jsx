@@ -4,19 +4,22 @@ import useLocalStorageState from 'use-local-storage-state';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 import './App.css';
+import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
-  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', false);
+  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', true);
 
   return (
     <>
       <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path='/' element={<Navigate to='/home' replace />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/home' element={<Home darkMode={darkMode} />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+      <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
     </>
   );
 }

@@ -56,7 +56,7 @@ const Contact = ({ activeSection, darkMode }) => {
 
   return (
     <>
-      <div className='page-container'>
+      <div className='contact-container'>
         <h1 className='title'>Contact Me</h1>
         <hr className='contact-page-break' />
         <div className='contact-content' id='contact-content'>
