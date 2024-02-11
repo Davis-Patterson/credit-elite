@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import useLocalStorageState from 'use-local-storage-state';
 import Nav from './Components/Nav';
@@ -10,6 +10,14 @@ import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const [darkMode, setDarkMode] = useLocalStorageState('darkMode', true);
+
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode');
+    if (storedDarkMode === null) {
+      setDarkMode(true);
+      localStorage.setItem('darkMode', 'true');
+    }
+  }, [setDarkMode]);
 
   return (
     <>
