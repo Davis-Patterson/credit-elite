@@ -202,17 +202,22 @@ body {
 }
 
 @keyframes widthGrow {
-  from {
-    width: 5%;
-  }
-  to {
+  0% {
     width: 32%;
+    opacity: 20%;
+  }
+  30% {
+    opacity: 60%;
+  }
+  100% {
+    width: 8%;
+    opacity: 100%;
   }
 }
 
 .contact-page-break {
-  border: none;
   background-color: var(--clr-break);
+  border: none;
   margin: 20px 0px 30px 0px;
   height: 10px;
   width: 5%;
