@@ -52,6 +52,22 @@ body {
   background-color: var(--clr-light);
 }
 
+@media screen and (max-width: 1300px) {
+  #LOGO {
+    width: 7%;
+  }
+  #SWITCH {
+    width: 7%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #LOGO {
+    width: 10%;
+  }
+  #SWITCH {
+    width: 10%;
+  }
+}
 @media screen and (max-width: 700px) {
   #LOGO {
     width: 15%;
@@ -81,7 +97,7 @@ body {
 }
 
 .logo-container {
-  width: 10%;
+  width: 5%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -96,7 +112,7 @@ body {
 }
 
 .switch-container {
-  width: 10%;
+  width: 5%;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -110,7 +126,7 @@ body {
 }
 
 .link-container {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: right;
   align-items: center;
