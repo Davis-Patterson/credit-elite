@@ -22,12 +22,12 @@ const Nav = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <div className='nav-container'>
-        <div className='logo-container'>
+        <div className='logo-container' id='LOGO'>
           <Link to='/home' className='home-link'>
             <img className='logo-img' src={currentLogo} alt='Logo Img' />
           </Link>
         </div>
-        <div className='switch-container'>
+        <div className='switch-container' id='SWITCH'>
           <MaterialUISwitch
             checked={darkMode}
             onChange={handleDarkModeChange}
