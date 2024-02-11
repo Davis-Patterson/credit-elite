@@ -23,7 +23,7 @@
   --clr-break: #c7c7c7;
   --clr-text: #181818;
   --clr-nav: #cccccc;
-  --clr-accent: #20bcfa;
+  --clr-accent: #fae526;
   --clr-shadow: #2929292d;
   --clr-shadow-dark: #29292942;
 }
@@ -34,9 +34,9 @@
   --clr-break: #7a7a7a;
   --clr-text: #eeeeee;
   --clr-nav: #363636;
-  --clr-accent: #2cb0ec;
-  --clr-shadow: #2929292d;
-  --clr-shadow-dark: #29292942;
+  --clr-accent: #fad505;
+  --clr-shadow: #41414165;
+  --clr-shadow-dark: #42424242;
 }
 
 #root {
@@ -114,14 +114,17 @@ body {
   margin: 0px;
 }
 
+.page-container,
 .home-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: calc(85vh - 100px);
+  height: calc(100vh - 100px);
   flex: 1;
-  margin: 90px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  min-height: 800px;
 }
 
 .title-container {
@@ -133,13 +136,13 @@ body {
 
 .title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  color: var(--clr-text);
-  line-height: 1;
-  padding: 0px;
-  margin: 0px;
-  transform: scaleY(85%);
-  /* border-bottom: 1px solid var(--clr-text); */
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 0.8;
+  color: var(--clr-dark);
+  transform: scaleY(95%);
+  margin: 0px 0px 0px 0px;
+  text-align: center;
 }
 
 .sub-title {
@@ -191,6 +194,146 @@ body {
   margin: 0;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes widthGrow {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 32%;
+  }
+}
+
+.contact-page-break {
+  border: none;
+  background-color: var(--clr-break);
+  margin: 20px 0px 30px 0px;
+  height: 10px;
+  width: 5%;
+  border-radius: 25px;
+  transition: width 0.5s ease-out;
+  animation: widthGrow 0.5s ease-out forwards;
+}
+
+.contact-content {
+  width: 500px;
+  border: 1px solid #777777;
+  padding: 40px 20px 40px 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--clr-screen);
+  z-index: 50;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email-form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+  font-weight: 200;
+  line-height: 0.8;
+  color: var(--clr-white);
+  transform: scaleY(95%);
+  margin: 0px 0px 30px 0px;
+}
+
+.name-input,
+.email-input,
+.message-input {
+  cursor: text;
+}
+
+.name-input,
+.email-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  border: 2px solid var(--clr-text);
+  padding: 15px 15px;
+  border-radius: 10px;
+  width: 350px;
+  margin: 2.5px 5px;
+}
+.message-input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  border: 2px solid var(--clr-text);
+  padding: 15px 15px;
+  border-radius: 10px;
+  width: 350px;
+  margin: 5px;
+  resize: vertical;
+  max-height: 250px;
+  min-height: 72px;
+  margin: 2.5px 0px 20px 0px;
+}
+.name-input:hover,
+.email-input:hover,
+.message-input:hover {
+  border: 2px solid var(--clr-accent);
+}
+.error {
+  color: var(--clr-error);
+}
+.success {
+  color: var(--clr-success);
+}
+.sending {
+  color: var(--clr-break);
+}
+.error,
+.success,
+.sending {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.submit-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: var(--clr-white);
+  background-color: var(--clr-break);
+  border: 1px solid var(--clr-break);
+  cursor: pointer;
+  margin: 22px 0px 0px 0px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  z-index: 50;
+}
+.submit-button:hover {
+  transform: scale(102%);
+  background-color: var(--clr-accent-dark);
+  border: 1px solid var(--clr-break);
+  color: var(--clr-accent);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s ease-in-out;
+}
+.submit-button:active {
+  transform: scale(98%);
+  color: var(--clr-accent);
+  transition: transform 0.2s;
+}
+
 .footer-container {
   border-top: 1px solid var(--clr-break);
   width: 100%;
@@ -214,4 +357,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  margin: 0;
 }
