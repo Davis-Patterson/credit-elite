@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoImg from '/src/assets/favicon-32x32.png';
-import logoImgLight from '/src/assets/favicon-32x32-light.png';
+import logoImg from '/src/assets/credit-elite-small.png';
+import logoImgWhite from '/src/assets/credit-elite-small-white.png';
 import MaterialUISwitch from './MaterialUISwitch';
 
 const Nav = ({ darkMode, setDarkMode }) => {
-  const currentLogo = darkMode ? logoImg : logoImgLight;
+  const currentLogo = darkMode ? logoImgWhite : logoImg;
 
   const handleDarkModeChange = (event) => {
     setDarkMode(!darkMode);
