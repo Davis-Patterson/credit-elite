@@ -263,7 +263,7 @@ body {
   font-size: 1em;
   color: var(--clr-dark);
   background-color: var(--clr-light);
-  border: 2px solid var(--clr-text);
+  border: 1px solid var(--clr-text);
   padding: 15px 15px;
   border-radius: 10px;
   width: 350px;
@@ -274,7 +274,7 @@ body {
   font-size: 1em;
   color: var(--clr-dark);
   background-color: var(--clr-light);
-  border: 2px solid var(--clr-text);
+  border: 1px solid var(--clr-text);
   padding: 15px 15px;
   border-radius: 10px;
   width: 350px;
@@ -287,7 +287,7 @@ body {
 .name-input:hover,
 .email-input:hover,
 .message-input:hover {
-  border: 2px solid var(--clr-accent);
+  border: 1px solid var(--clr-accent);
 }
 .error {
   color: var(--clr-error);
