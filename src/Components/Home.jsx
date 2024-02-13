@@ -15,15 +15,30 @@ const Home = ({ darkMode }) => {
           <p className='sub-title'>by LUIS PEGUERO</p>
         </div>
         <div className='button-container'>
-          <div className='home-button'>
+          <a
+            className='home-button'
+            href='https://www.identityiq.com/sc-securepreferred.aspx?offercode=4312844H'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <p className='home-button-text'>IDENTITY IQ</p>
+          </a>
+          <a
+            className='home-button'
+            href='https://www.myscoreiq.com/get-fico-max.aspx?offercode=432135TY'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <p className='home-button-text'>SCORE IQ</p>
+          </a>
+          <a
+            className='home-button'
+            href='https://credit-elite.netlify.app/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <p className='home-button-text'>BUTTON</p>
-          </div>
-          <div className='home-button'>
-            <p className='home-button-text'>BUTTON</p>
-          </div>
-          <div className='home-button'>
-            <p className='home-button-text'>BUTTON</p>
-          </div>
+          </a>
         </div>
       </div>
     </>
