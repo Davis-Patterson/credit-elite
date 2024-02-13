@@ -203,7 +203,11 @@ body {
   text-decoration: none;
   border-radius: 10px;
   z-index: 50;
-  padding: 20px 20%;
+  padding: 20px 20px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-button:hover {
   transform: scale(102%);
