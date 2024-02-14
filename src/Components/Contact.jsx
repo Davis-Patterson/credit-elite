@@ -24,10 +24,10 @@ const Contact = ({ activeSection, darkMode }) => {
     setSending(true);
     emailjs
       .sendForm(
-        'service_cbk0eww',
-        'template_cz31eqp',
+        'service_smocg5d',
+        'template_xiaw36p',
         e.target,
-        'yBjEhIJRk4yxfyCnY'
+        'xISZ-lko86_-yCSNI'
       )
       .then(
         (result) => {
