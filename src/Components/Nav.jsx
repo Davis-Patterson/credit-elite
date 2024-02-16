@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoImg from '/src/assets/credit-elite-small.png';
-import logoImgWhite from '/src/assets/credit-elite-small-white.png';
+import logoImg from '/src/assets/credit-elite-small-white.png';
 import MaterialUISwitch from './MaterialUISwitch';
 
 const Nav = ({ darkMode, setDarkMode }) => {
-  const currentLogo = darkMode ? logoImgWhite : logoImg;
+  const { pathname } = useLocation();
 
   const handleDarkModeChange = (event) => {
     setDarkMode(!darkMode);
@@ -19,12 +18,15 @@ const Nav = ({ darkMode, setDarkMode }) => {
     }
   }, [darkMode]);
 
+  const isActive = (path) =>
+    pathname === path || (path === '/home' && pathname === '/');
+
   return (
     <>
       <div className='nav-container'>
         <div className='logo-container' id='LOGO'>
           <Link to='/home' className='home-link'>
-            <img className='logo-img' src={currentLogo} alt='Logo Img' />
+            <img className='logo-img' src={logoImg} alt='Logo Img' />
           </Link>
         </div>
         <div className='switch-container' id='SWITCH'>
@@ -36,8 +38,23 @@ const Nav = ({ darkMode, setDarkMode }) => {
         </div>
         <div className='social-container'></div>
         <div className='link-container'>
-          <Link to='/contact' className='contact-link'>
+          <Link
+            to='/home'
+            className={`contact-link ${isActive('/home') ? 'active' : ''}`}
+          >
+            <p className='contact-link-button'>HOME</p>
+          </Link>
+          <Link
+            to='/contact'
+            className={`contact-link ${isActive('/contact') ? 'active' : ''}`}
+          >
             <p className='contact-link-button'>CONTACT</p>
+          </Link>
+          <Link
+            to='/schedule'
+            className={`contact-link ${isActive('/schedule') ? 'active' : ''}`}
+          >
+            <p className='contact-link-button'>SCHEDULE</p>
           </Link>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 
-const Contact = ({ activeSection, darkMode }) => {
+const Contact = ({}) => {
   const [form, setForm] = useState({
     user_name: '',
     user_email: '',
@@ -100,6 +101,16 @@ const Contact = ({ activeSection, darkMode }) => {
                 Send Email
               </button>
             </form>
+            <div className='contact-words-link-container'>
+              <div className='contact-link-words'>Click here to </div>
+              <Link to='/schedule' className='contact-words-link'>
+                <p className='contact-words-link-button'>
+                  {' '}
+                  schedule a consultation
+                </p>
+              </Link>
+              <div className='contact-link-words'>.</div>
+            </div>
           </div>
         </div>
         {/* <div className='gap' /> */}

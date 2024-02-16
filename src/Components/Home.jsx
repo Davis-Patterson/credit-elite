@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CELogo from '/src/assets/credit-elite-logo.png';
 import CELogoInvert from '/src/assets/credit-elite-logo-white.png';
 
@@ -31,14 +32,9 @@ const Home = ({ darkMode }) => {
           >
             <p className='home-button-text'>SCORE IQ</p>
           </a>
-          <a
-            className='home-button'
-            href='https://credit-elite.netlify.app/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <p className='home-button-text'>BUTTON</p>
-          </a>
+          <Link to='/schedule' className='home-button'>
+            <p className='home-button-text'>BOOK A CONSULTATION</p>
+          </Link>
         </div>
       </div>
     </>

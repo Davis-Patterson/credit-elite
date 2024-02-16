@@ -4,6 +4,7 @@ import useLocalStorageState from 'use-local-storage-state';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import Contact from './Components/Contact';
+import Schedule from './Components/Schedule';
 import Footer from './Components/Footer';
 import './App.css';
 import { dark } from '@mui/material/styles/createPalette';
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<Navigate to='/home' replace />} />
         <Route path='/home' element={<Home darkMode={darkMode} />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/schedule' element={<Schedule />} />
       </Routes>
       <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
     </>
