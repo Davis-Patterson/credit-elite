@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 
@@ -12,6 +12,8 @@ const Contact = ({}) => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
+  const [buttonActive, setButtonActive] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prevState) => ({
@@ -19,6 +21,12 @@ const Contact = ({}) => {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    const isFormEmpty =
+      !form.user_name.trim() || !form.user_email.trim() || !form.message.trim();
+    setButtonActive(!isFormEmpty);
+  }, [form.user_name, form.user_email, form.message]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -91,13 +99,16 @@ const Contact = ({}) => {
                 className='message-input'
               ></textarea>
               {sending && <p className='sending'>Sending your email</p>}
-              {/* {error && (
-              <p className='error'>There was an error sending your email</p>
+              {error && (
+                <p className='contact-error'>
+                  There was an error sending your email.
+                </p>
               )}
-              {success && (
-                <p className='success'>Your Email was successfully sent!</p>
-              )} */}
-              <button type='submit' className='submit-button'>
+              <button
+                type='submit'
+                className={buttonActive ? 'submit-button' : 'inactive'}
+                disabled={!buttonActive}
+              >
                 Send Email
               </button>
             </form>
@@ -113,7 +124,6 @@ const Contact = ({}) => {
             </div>
           </div>
         </div>
-        {/* <div className='gap' /> */}
       </div>
     </>
   );
