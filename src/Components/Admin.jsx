@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import useLocalStorageState from 'use-local-storage-state';
 import emailjs from 'emailjs-com';
 import axios from 'axios';
 
-const Schedule = ({}) => {
+const Admin = ({}) => {
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
@@ -25,12 +26,10 @@ const Schedule = ({}) => {
     <>
       <div className='page-container'>
         <div className='schedule-container'>
-          <h1 className='title'>CALENDAR</h1>
+          <h1 className='title'>ADMIN</h1>
           <hr className='contact-page-break' />
           <div className='schedule-content' id='contact-content'>
-            <p className='schedule-subtitle'>
-              Schedule an appointment for a consultation:
-            </p>
+            <p className='schedule-subtitle'>Add available appointments:</p>
           </div>
         </div>
       </div>
@@ -38,4 +37,4 @@ const Schedule = ({}) => {
   );
 };
 
-export default Schedule;
+export default Admin;
