@@ -58,7 +58,7 @@ const Contact = ({}) => {
           console.log('Failed to send email:', error.text);
           setTimeout(() => {
             setError(false);
-          }, 5000);
+          }, 3000);
         }
       );
   };

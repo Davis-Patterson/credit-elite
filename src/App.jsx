@@ -52,7 +52,7 @@ function App() {
             <Route path='/authorize' element={<Auth setToken={setToken} />} />
           </Routes>
         </div>
-        <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Footer token={token} setToken={setToken} />
       </div>
     </>
   );

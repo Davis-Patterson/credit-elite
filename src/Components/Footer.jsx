@@ -1,19 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoImg from '/src/assets/credit-elite-small.png';
-import logoImgWhite from '/src/assets/credit-elite-small-white.png';
 
-const Footer = ({ darkMode, setDarkMode }) => {
-  const currentLogo = darkMode ? logoImgWhite : logoImg;
+const Footer = ({ token, setToken }) => {
   const location = useLocation();
 
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('darkMode');
-    } else {
-      document.body.classList.remove('darkMode');
-    }
-  }, [darkMode]);
+  const handleLogout = () => {
+    setToken('');
+  };
 
   return (
     <>
@@ -40,8 +33,13 @@ const Footer = ({ darkMode, setDarkMode }) => {
                 <p className='footer-link-button'>ADMIN</p>
               </Link>
             )}
+          {token !== '' && (
+            <p onClick={handleLogout} className='footer-link-button'>
+              LOGOUT
+            </p>
+          )}
         </div>
-        <p className='footer-text'>© Copyright 2024 CREDIT ELITE</p>
+        <p className='footer-text'>© Copyright 2023 CREDIT ELITE</p>
       </div>
     </>
   );
