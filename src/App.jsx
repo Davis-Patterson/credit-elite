@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import useLocalStorageState from 'use-local-storage-state';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
+import About from './Components/About';
 import Contact from './Components/Contact';
 import Schedule from './Components/Schedule';
 import Admin from './Components/Admin';
@@ -39,7 +40,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Navigate to='/home' replace />} />
             <Route path='/home' element={<Home darkMode={darkMode} />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path='/about' element={<About darkMode={darkMode} />} />
+            <Route path='/contact' element={<Contact darkMode={darkMode} />} />
             <Route path='/schedule' element={<Schedule />} />
             <Route
               path='/admin'

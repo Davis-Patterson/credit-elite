@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import IgLogoWhite from '/src/assets/IG_logo_white.svg';
+import IgLogoBlack from '/src/assets/IG_logo_black.svg';
 
-const Contact = ({}) => {
+const Contact = ({ darkMode }) => {
   const [form, setForm] = useState({
     user_name: '',
     user_email: '',
@@ -13,6 +15,8 @@ const Contact = ({}) => {
   const [error, setError] = useState(false);
 
   const [buttonActive, setButtonActive] = useState(false);
+
+  const currentLogo = darkMode ? IgLogoWhite : IgLogoBlack;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -69,7 +73,29 @@ const Contact = ({}) => {
         <div className='contact-container'>
           <h1 className='title'>CONTACT</h1>
           <hr className='contact-page-break' />
-          <div className='contact-content' id='contact-content'>
+          <section className='number-section'>
+            <div className='phone-container'>
+              <p className='phone-title'>Give us a call:</p>
+              <p className='phone-number'>(954)668-0044</p>
+              <p className='phone-number'>(754)600-3534</p>
+            </div>
+            <div className='contact-social-container'>
+              <p className='phone-title'>Follow us:</p>
+              <a
+                href='https://www.instagram.com/credit_elite'
+                className='IG-link-nav'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  src={currentLogo}
+                  alt='IG logo'
+                  className='IG-logo-contact'
+                />
+              </a>
+            </div>
+          </section>
+          <section className='contact-content' id='contact-content'>
             <form onSubmit={handleSubmit} className='contact-form'>
               <p className='email-form-title'>Send us an email:</p>
               <input
@@ -122,7 +148,7 @@ const Contact = ({}) => {
               </Link>
               <div className='contact-link-words'>.</div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </>
