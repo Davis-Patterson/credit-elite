@@ -43,7 +43,7 @@
 }
 
 .darkMode {
-  --clr-light: #1a1a1a;
+  --clr-light: #0e0e0e;
   --clr-white: #ffffff;
   --clr-dark: #d0d0d0;
   --clr-black: #292929;
@@ -68,6 +68,7 @@
 #root {
   margin: 0 auto;
   width: 100%;
+  background-color: var(--clr-light);
 }
 
 html,
@@ -124,6 +125,13 @@ body {
   background-color: var(--clr-nav);
 }
 
+/* 
+logo 5% 
+social 20% 
+switch 5%
+link 70%  
+*/
+
 .logo-container {
   width: 5%;
   display: flex;
@@ -139,23 +147,33 @@ body {
   align-items: center;
 }
 
-.switch-container {
-  width: 5%;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  padding-left: 20px;
-}
-
 .social-container {
-  width: 20%;
+  width: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.IG-link-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IG-logo-nav {
+  width: 30px;
+}
+
+.switch-container {
+  width: 5%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-left: 0px;
+}
+
 .link-container {
-  width: 70%;
+  width: 85%;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -203,6 +221,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--clr-light);
 }
 
 .content-wrap {
@@ -261,26 +280,35 @@ body {
   margin: 40px 0px 0px 0px;
 }
 
-.home-button {
+.home-button,
+.about-button {
   border: 1px solid var(--clr-dark);
   cursor: pointer;
-  margin: 10px 0px 10px 0px;
   text-decoration: none;
   border-radius: 10px;
   z-index: 50;
   padding: 20px 20px;
-  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home-button:hover {
+.home-button {
+  margin: 10px 0px 10px 0px;
+  width: 250px;
+}
+.about-button {
+  margin: 40px 10px 10px 10px;
+  width: 150px;
+}
+.home-button:hover,
+.about-button:hover {
   transform: scale(102%);
   background-color: var(--clr-shadow);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s, box-shadow 0.2s ease-in-out;
 }
-.home-button:active {
+.home-button:active,
+.about-button:active {
   transform: scale(98%);
   background-color: var(--clr-shadow-dark);
   box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -294,6 +322,71 @@ body {
   font-weight: 500;
   line-height: 1;
   margin: 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  /* min-width: 500px; */
+  border: 1px solid #777777;
+  padding: 40px 20px 20px 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--clr-screen);
+  z-index: 50;
+}
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  line-height: 0.8;
+  color: var(--clr-dark);
+  transform: scaleY(95%);
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.LV-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--clr-text);
+  line-height: 1;
+  padding: 0px;
+  margin: 10px 0px;
+  transform: scaleX(120%);
+  margin: 10px 0px 20px 0px;
+}
+
+.about-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--clr-dark);
+  text-align: center;
+  /* transform: scaleY(95%); */
+  margin: 0px 0px 10px 0px;
+}
+
+.link-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-container {
@@ -326,6 +419,54 @@ body {
   border-radius: 25px;
   transition: width 0.5s ease-out;
   animation: widthGrow 0.5s ease-out forwards;
+}
+
+.number-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px 0px 20px 0px;
+}
+
+.phone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 5px 0px 0px;
+}
+
+.phone-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+  font-weight: 200;
+  line-height: 0.8;
+  color: var(--clr-dark);
+  transform: scaleY(95%);
+  margin: 0px 10px 7px 0px;
+}
+
+.phone-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--clr-dark);
+  transform: scaleY(95%);
+  margin: 0px 0px 0px 0px;
+}
+
+.contact-social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 0px 0px 10px;
+}
+
+.IG-logo-contact {
+  width: 35px;
 }
 
 .contact-content {

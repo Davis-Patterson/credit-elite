@@ -17,6 +17,11 @@ const Footer = ({ token, setToken }) => {
               <p className='footer-link-button'>HOME</p>
             </Link>
           )}
+          {location.pathname !== '/about' && (
+            <Link to='/about' className='footer-link'>
+              <p className='footer-link-button'>ABOUT</p>
+            </Link>
+          )}
           {location.pathname !== '/contact' && (
             <Link to='/contact' className='footer-link'>
               <p className='footer-link-button'>CONTACT</p>
