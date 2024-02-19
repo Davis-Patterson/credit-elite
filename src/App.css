@@ -237,6 +237,8 @@ link 70%
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -277,7 +279,7 @@ link 70%
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 40px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .home-button,
@@ -339,13 +341,6 @@ link 70%
   flex-direction: column;
   width: 80%;
   /* min-width: 500px; */
-  border: 1px solid #777777;
-  padding: 40px 20px 20px 20px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: var(--clr-screen);
   z-index: 50;
 }
@@ -369,7 +364,14 @@ link 70%
   padding: 0px;
   margin: 10px 0px;
   transform: scaleX(120%);
-  margin: 10px 0px 20px 0px;
+}
+
+.desc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
 }
 
 .about-subtitle {

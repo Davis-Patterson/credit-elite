@@ -7,15 +7,16 @@ const Home = ({ darkMode }) => {
   return (
     <>
       <div className='home-container'>
-        <div className='title-container'>
+        <section className='title-container'>
           <img
             className='CE-Logo'
             src={darkMode ? CELogoInvert : CELogo}
             alt='CE-Logo'
           />
           <p className='sub-title'>by LUIS PEGUERO</p>
-        </div>
-        <div className='button-container'>
+        </section>
+        <hr className='contact-page-break' />
+        <section className='button-container'>
           <a
             className='home-button'
             href='https://www.identityiq.com/sc-securepreferred.aspx?offercode=4312844H'
@@ -35,7 +36,7 @@ const Home = ({ darkMode }) => {
           <Link to='/schedule' className='home-button'>
             <p className='home-button-text'>BOOK A CONSULTATION</p>
           </Link>
-        </div>
+        </section>
       </div>
     </>
   );
