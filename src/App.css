@@ -148,6 +148,12 @@ body {
   #message-input {
     width: 300px;
   }
+  #footer-container {
+    flex-wrap: wrap;
+  }
+  #footer-link {
+    width: 33%;
+  }
 }
 @media screen and (max-width: 400px) {
   #LOGO {
@@ -572,6 +578,7 @@ link 70%
   width: 500px;
   border: 1px solid #777777;
   padding: 40px 20px 20px 20px;
+  margin: 0px 0px 50px 0px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -725,12 +732,16 @@ link 70%
   transform: scaleY(95%);
   margin: 0px 0px 0px 5px;
 }
+.contact-words-link-button:hover {
+  font-weight: 600;
+}
 
 .schedule-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0px 0px 50px 0px;
 }
 
 .schedule-content {
@@ -884,6 +895,7 @@ link 70%
   align-items: center;
   flex-wrap: wrap;
   width: 60%;
+  margin: 0px 0px 10px 0px;
 }
 
 .appointment-box {
@@ -923,7 +935,7 @@ link 70%
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 30px 0px 30px 0px;
+  margin: 30px 0px 20px 0px;
 }
 
 .email-form-title {
@@ -1142,7 +1154,7 @@ link 70%
 .footer-container {
   border-top: 1px solid var(--clr-break);
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background-color: var(--clr-light);
   display: flex;
   justify-content: center;
@@ -1156,10 +1168,15 @@ link 70%
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px 0px;
 }
 
 .footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   margin: 0px 10px;
 }
