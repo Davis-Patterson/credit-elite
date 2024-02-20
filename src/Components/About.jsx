@@ -37,10 +37,10 @@ const About = ({ darkMode }) => {
                 </p>
               </div>
               <section className='link-section'>
-                <Link to='/home' className='about-button'>
+                <Link to='/home' className='about-button' ID='about-button'>
                   <p className='home-button-text'>CONTACT</p>
                 </Link>
-                <Link to='/schedule' className='about-button'>
+                <Link to='/schedule' className='about-button' ID='about-button'>
                   <p className='home-button-text'>SCHEDULE</p>
                 </Link>
               </section>

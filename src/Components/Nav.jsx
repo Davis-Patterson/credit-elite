@@ -1,11 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logoImg from '/src/assets/credit-elite-small-white.png';
 import IGlogo from '/src/assets/IG_logo_white.svg';
 import MaterialUISwitch from './MaterialUISwitch';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 
 const Nav = ({ darkMode, setDarkMode }) => {
+  const [dropdown, setDropdown] = useState(false);
+
   const { pathname } = useLocation();
+
+  const dropdownRef = useRef(null);
+  const menuIconRef = useRef(null);
 
   const handleDarkModeChange = (event) => {
     setDarkMode(!darkMode);
@@ -19,8 +25,40 @@ const Nav = ({ darkMode, setDarkMode }) => {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuIconRef.current &&
+        (menuIconRef.current === event.target ||
+          menuIconRef.current.contains(event.target))
+      ) {
+        return;
+      }
+
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    }
+
+    if (dropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdown]);
+
   const isActive = (path) =>
     pathname === path || (path === '/home' && pathname === '/');
+
+  const handleMenu = () => {
+    setDropdown(!dropdown);
+  };
+
+  const handleDropdown = () => {
+    setDropdown(false);
+  };
 
   return (
     <>
@@ -48,6 +86,13 @@ const Nav = ({ darkMode, setDarkMode }) => {
           />
         </div>
         <div className='link-container'>
+          <DehazeIcon
+            className='menu-icon'
+            onClick={handleMenu}
+            ref={menuIconRef}
+            id='menu-icon'
+            style={{ display: 'none' }}
+          />
           <Link
             to='/home'
             className={`contact-link ${isActive('/home') ? 'active' : ''}`}
@@ -74,6 +119,50 @@ const Nav = ({ darkMode, setDarkMode }) => {
           </Link>
         </div>
       </div>
+      {dropdown && (
+        <div className='dropdown-menu'>
+          <div className='dropdown-box'>
+            <Link
+              to='/home'
+              className={`dropdown-link ${isActive('/home') ? 'active' : ''}`}
+              onClick={handleDropdown}
+            >
+              <p className='dropdown-link-button'>HOME</p>
+            </Link>
+          </div>
+          <div className='dropdown-box'>
+            <Link
+              to='/about'
+              className={`dropdown-link ${isActive('/about') ? 'active' : ''}`}
+              onClick={handleDropdown}
+            >
+              <p className='dropdown-link-button'>ABOUT</p>
+            </Link>
+          </div>
+          <div className='dropdown-box'>
+            <Link
+              to='/contact'
+              className={`dropdown-link ${
+                isActive('/contact') ? 'active' : ''
+              }`}
+              onClick={handleDropdown}
+            >
+              <p className='dropdown-link-button'>CONTACT</p>
+            </Link>
+          </div>
+          <div className='dropdown-box'>
+            <Link
+              to='/schedule'
+              className={`dropdown-link ${
+                isActive('/schedule') ? 'active' : ''
+              }`}
+              onClick={handleDropdown}
+            >
+              <p className='dropdown-link-button'>SCHEDULE</p>
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 };
