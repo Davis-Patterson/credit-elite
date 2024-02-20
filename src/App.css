@@ -492,6 +492,7 @@ link 70%
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px 0px 80px 0px;
 }
 
 .contact-container {
@@ -578,7 +579,7 @@ link 70%
   width: 500px;
   border: 1px solid #777777;
   padding: 40px 20px 20px 20px;
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 80px 0px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -741,7 +742,7 @@ link 70%
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 80px 0px;
 }
 
 .schedule-content {
