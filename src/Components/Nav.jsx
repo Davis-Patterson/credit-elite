@@ -26,23 +26,18 @@ const Nav = ({ darkMode, setDarkMode }) => {
   }, [darkMode]);
 
   useEffect(() => {
-    function handleClickOutside(event) {
+    const handleClickOutside = (event) => {
       if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
         menuIconRef.current &&
-        (menuIconRef.current === event.target ||
-          menuIconRef.current.contains(event.target))
+        !menuIconRef.current.contains(event.target)
       ) {
-        return;
-      }
-
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdown(false);
       }
-    }
+    };
 
-    if (dropdown) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -120,7 +115,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
         </div>
       </div>
       {dropdown && (
-        <div className='dropdown-menu'>
+        <div className='dropdown-menu' ref={dropdownRef}>
           <div className='dropdown-box'>
             <Link
               to='/home'
