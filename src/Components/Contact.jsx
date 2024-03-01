@@ -106,7 +106,7 @@ const Contact = ({ darkMode }) => {
                 onChange={handleChange}
                 required
                 className='name-input'
-                ID='name-input'
+                id='name-input'
               />
               <input
                 type='email'
@@ -116,7 +116,7 @@ const Contact = ({ darkMode }) => {
                 onChange={handleChange}
                 required
                 className='email-input'
-                ID='email-input'
+                id='email-input'
               />
               <textarea
                 name='message'
@@ -125,7 +125,7 @@ const Contact = ({ darkMode }) => {
                 onChange={handleChange}
                 required
                 className='message-input'
-                ID='message-input'
+                id='message-input'
               ></textarea>
               {sending && <p className='sending'>Sending your email</p>}
               {error && (
