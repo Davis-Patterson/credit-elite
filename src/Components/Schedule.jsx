@@ -40,9 +40,11 @@ const Schedule = () => {
       'https://credit-elite-backend-0eb2f609fa81.herokuapp.com/api/appointments';
     try {
       const response = await axios.get(apptURL);
-      const availableAppointments = response.data.filter(
-        (appointment) => appointment.available
-      );
+      const currentTime = new Date();
+      const availableAppointments = response.data.filter((appointment) => {
+        const apptDate = new Date(appointment.date);
+        return apptDate >= currentTime && appointment.available;
+      });
       setAppointments(availableAppointments);
     } catch (error) {
       console.error('Failed to fetch appointments:', error);

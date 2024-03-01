@@ -764,6 +764,7 @@ link 70%
   color: var(--clr-dark);
   transform: scaleY(95%);
   margin: 0px 0px 30px 0px;
+  text-align: center;
 }
 
 .react-calendar {
