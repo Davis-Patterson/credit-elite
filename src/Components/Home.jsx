@@ -13,7 +13,7 @@ const Home = ({ darkMode }) => {
       <div className='home-container'>
         <section className='title-container'>
           <img
-            className='CE-Logo'
+            className='RR-Logo'
             src={darkMode ? RRLogoWhite : RRLogoBlack}
             alt='CE-Logo'
           />

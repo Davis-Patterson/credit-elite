@@ -13,7 +13,7 @@ const About = ({ darkMode }) => {
           <div className='about-container'>
             <section className='about-section'>
               <img
-                className='CE-Logo'
+                className='RR-Logo'
                 src={currentLogo}
                 alt='Credit Elite logo'
               />
