@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CELogo from '/src/assets/credit-elite-logo.png';
 import CELogoInvert from '/src/assets/credit-elite-logo-white.png';
+import LVLogoBlack from '/src/assets/LV-logo-black.png';
+import LVLogoWhite from '/src/assets/LV-logo-white.png';
+import RRLogoBlack from '/src/assets/RR-logo-black.png';
+import RRLogoWhite from '/src/assets/RR-logo-white.png';
 
 const Home = ({ darkMode }) => {
   return (
@@ -10,7 +14,7 @@ const Home = ({ darkMode }) => {
         <section className='title-container'>
           <img
             className='CE-Logo'
-            src={darkMode ? CELogoInvert : CELogo}
+            src={darkMode ? RRLogoWhite : RRLogoBlack}
             alt='CE-Logo'
           />
           <p className='sub-title'>by LUIS PEGUERO</p>

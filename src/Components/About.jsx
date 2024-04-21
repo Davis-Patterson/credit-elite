@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CELogo from '/src/assets/credit-elite-logo.png';
-import CELogoInvert from '/src/assets/credit-elite-logo-white.png';
+import RRLogoBlack from '/src/assets/RR-logo-black.png';
+import RRLogoWhite from '/src/assets/RR-logo-white.png';
 
 const About = ({ darkMode }) => {
-  const currentLogo = darkMode ? CELogoInvert : CELogo;
+  const currentLogo = darkMode ? RRLogoWhite : RRLogoBlack;
 
   return (
     <>
@@ -29,7 +29,7 @@ const About = ({ darkMode }) => {
                   credit.
                 </p>
                 <p className='about-subtitle'>
-                  At <strong>CREDIT ELITE</strong>, we engage in negotiations
+                  At <strong>Robyn Robyn's</strong>, we engage in negotiations
                   with creditors to rectify inaccuracies on your credit report
                   and eliminate outdated information. Furthermore, we provide
                   guidance on adopting effective strategies for credit building
@@ -37,7 +37,7 @@ const About = ({ darkMode }) => {
                 </p>
               </div>
               <section className='link-section'>
-                <Link to='/home' className='about-button' ID='about-button'>
+                <Link to='/contact' className='about-button' ID='about-button'>
                   <p className='home-button-text'>CONTACT</p>
                 </Link>
                 <Link to='/schedule' className='about-button' ID='about-button'>
