@@ -37,6 +37,14 @@ const Home = ({ darkMode }) => {
           >
             <p className='home-button-text'>SCORE IQ</p>
           </a>
+          <a
+            className='home-button'
+            href='https://myfreescorenow.com/enroll/?AID=CREDITELITE&PID=48157'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <p className='home-button-text'>MY FREE SCORE</p>
+          </a>
           <Link to='/schedule' className='home-button'>
             <p className='home-button-text'>BOOK A CONSULTATION</p>
           </Link>
