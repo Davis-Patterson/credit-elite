@@ -391,7 +391,6 @@ link 70%
   border: 1px solid var(--clr-dark);
   cursor: pointer;
   text-decoration: none;
-  border-radius: 10px;
   z-index: 50;
   padding: 20px 20px;
   display: flex;
@@ -401,21 +400,23 @@ link 70%
 .home-button {
   margin: 10px 0px 10px 0px;
   width: 250px;
+  border-radius: 0px;
 }
 .about-button {
   margin: 40px 10px 10px 10px;
   width: 150px;
+  border-radius: 0px;
 }
 .home-button:hover,
 .about-button:hover {
-  transform: scale(102%);
+  /* transform: scale(102%); */
   background-color: var(--clr-shadow);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s, box-shadow 0.2s ease-in-out;
 }
 .home-button:active,
 .about-button:active {
-  transform: scale(98%);
+  /* transform: scale(98%); */
   background-color: var(--clr-shadow-dark);
   box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s ease-in-out;
@@ -735,7 +736,7 @@ link 70%
   margin: 0px 0px 0px 5px;
 }
 .contact-words-link-button:hover {
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .schedule-container {
