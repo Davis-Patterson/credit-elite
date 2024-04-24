@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CELogo from '/src/assets/credit-elite-logo.png';
-import CELogoInvert from '/src/assets/credit-elite-logo-white.png';
 import LVLogoBlack from '/src/assets/LV-logo-black.png';
 import LVLogoWhite from '/src/assets/LV-logo-white.png';
 import RRLogoBlack from '/src/assets/RR-logo-black.png';
@@ -23,30 +21,17 @@ const Home = ({ darkMode }) => {
         <section className='button-container'>
           <a
             className='home-button'
-            href='https://www.identityiq.com/sc-securepreferred.aspx?offercode=4312844H'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <p className='home-button-text'>IDENTITY IQ</p>
-          </a>
-          <a
-            className='home-button'
-            href='https://www.myscoreiq.com/get-fico-max.aspx?offercode=432135TY'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <p className='home-button-text'>SCORE IQ</p>
-          </a>
-          <a
-            className='home-button'
             href='https://myfreescorenow.com/enroll/?AID=CREDITELITE&PID=48157'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <p className='home-button-text'>MY FREE SCORE</p>
+            <p className='home-button-text'>Check Your Credit Here</p>
           </a>
+          <Link to='/contact' className='home-button'>
+            <p className='home-button-text'>Contact Us Here</p>
+          </Link>
           <Link to='/schedule' className='home-button'>
-            <p className='home-button-text'>BOOK A CONSULTATION</p>
+            <p className='home-button-text'>Book a 1:1 Consultation Here</p>
           </Link>
         </section>
       </div>
