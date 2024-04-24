@@ -87,6 +87,7 @@ const Auth = ({ setToken }) => {
                 onChange={handleChange}
                 required
                 className='username-input'
+                id='username-input'
               />
               <input
                 type='password'
@@ -96,6 +97,7 @@ const Auth = ({ setToken }) => {
                 onChange={handleChange}
                 required
                 className='password-input'
+                id='password-input'
               />
               {error && <div className='auth-error'>{error}</div>}
               <button
