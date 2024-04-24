@@ -37,10 +37,12 @@
   --clr-today: #96c9ff;
   --clr-today-hover: #3690f1;
   --clr-red: #ff0000;
-  --clr-available: #15b91e;
+  --clr-available: #000000;
+  --clr-unavailable: #ebebeb;
   --clr-unbooked: #8f999e;
   --clr-booked: #607fa0;
   --clr-dropdown: #363636;
+  --clr-apt-hover: #e6e6e6;
 }
 
 .darkMode {
@@ -63,8 +65,10 @@
   --clr-today: #96c9ff;
   --clr-today-hover: #3690f1;
   --clr-red: #ff0000;
-  --clr-available: #1dbe25;
+  --clr-available: #ffffff;
+  --clr-unavailable: #1b1b1b;
   --clr-dropdown: #363636;
+  --clr-apt-hover: #1b1b1b;
 }
 
 #root {
@@ -145,7 +149,9 @@ body {
   }
   #name-input,
   #email-input,
-  #message-input {
+  #message-input,
+  #username-input,
+  #password-input {
     width: 300px;
   }
   #footer-container {
@@ -167,7 +173,9 @@ body {
   }
   #name-input,
   #email-input,
-  #message-input {
+  #message-input,
+  #username-input,
+  #password-input {
     width: 280px;
   }
   #about-button {
@@ -780,16 +788,16 @@ link 70%
 }
 
 .react-calendar__tile {
-  color: var(--clr-dark);
+  color: var(--clr-unavailable);
 }
 
 .react-calendar__month-view__days__day {
-  color: var(--clr-dark);
+  color: var(--clr-unavailable);
 }
-
+/* 
 .react-calendar__month-view__days__day--weekend {
   color: var(--clr-red);
-}
+} */
 
 .react-calendar__tile--now {
   background: var(--clr-today);
@@ -860,8 +868,8 @@ link 70%
 }
 
 .highlight {
-  background-color: var(--clr-available);
-  color: var(--clr-white);
+  /* background-color: var(--clr-available); */
+  color: var(--clr-available);
 }
 .available {
   background-color: var(--clr-unbooked);
@@ -918,12 +926,13 @@ link 70%
   cursor: pointer;
 }
 .appointment-box:hover {
-  transform: scale(105%);
+  /* transform: scale(105%); */
+  background-color: var(--clr-apt-hover);
   transition: transform 0.3s;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 .appointment-box:active {
-  transform: scale(98%);
+  /* transform: scale(98%); */
   transition: transform 0.3s;
   box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -998,6 +1007,7 @@ link 70%
   color: var(--clr-dark);
   transform: scaleY(95%);
   margin: 0px 0px 30px 0px;
+  text-align: center;
 }
 
 .auth-words-link-container {
@@ -1195,7 +1205,7 @@ link 70%
   margin: 10px 5px 10px 5px;
 }
 .footer-link-button:hover {
-  font-weight: 600;
+  color: var(--clr-accent);
 }
 
 .footer-text {
