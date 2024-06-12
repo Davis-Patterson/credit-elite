@@ -134,6 +134,9 @@ body {
   #contact-content {
     width: 400px;
   }
+  #contact-section {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 470px) {
   #LOGO {
@@ -537,20 +540,26 @@ link 70%
   animation: widthGrow 0.5s ease-out forwards;
 }
 
-.number-section {
+.contact-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   margin: 0px 0px 20px 0px;
+  height: 90px;
+  width: 70%;
 }
 
-.phone-container {
+.phone-container,
+.contact-social-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.phone-container {
   margin: 0px 5px 0px 0px;
+}
+
+.contact-social-container {
+  margin: 0px 0px 0px 10px;
 }
 
 .phone-title {
@@ -560,32 +569,25 @@ link 70%
   line-height: 0.8;
   color: var(--clr-dark);
   transform: scaleY(95%);
-  margin: 0px 10px 7px 10px;
+  margin: 0px 0px 0px 0px;
 }
 
 .phone-number {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 400;
   line-height: 1;
   color: var(--clr-dark);
   transform: scaleY(95%);
-  margin: 0px 0px 0px 0px;
-}
-
-.contact-social-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0px 0px 0px 10px;
+  margin: 15px 0px 0px 0px;
 }
 
 .IG-logo-contact {
   width: 35px;
+  margin: 10px 0px 0px 0px;
 }
 
-.contact-content {
+.email-section {
   width: 500px;
   border: 1px solid #777777;
   padding: 40px 20px 20px 20px;

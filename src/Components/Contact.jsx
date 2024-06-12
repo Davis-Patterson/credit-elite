@@ -73,11 +73,10 @@ const Contact = ({ darkMode }) => {
         <div className='contact-container'>
           <h1 className='title'>CONTACT</h1>
           <hr className='contact-page-break' />
-          <section className='number-section'>
+          <section className='contact-section' id='contact-section'>
             <div className='phone-container'>
               <p className='phone-title'>Give us a call:</p>
-              <p className='phone-number'>(954)668-0044</p>
-              <p className='phone-number'>(754)600-3534</p>
+              <p className='phone-number'>(610)406-2549</p>
             </div>
             <div className='contact-social-container'>
               <p className='phone-title'>Follow us:</p>
@@ -95,7 +94,7 @@ const Contact = ({ darkMode }) => {
               </a>
             </div>
           </section>
-          <section className='contact-content' id='contact-content'>
+          <section className='email-section' id='contact-content'>
             <form onSubmit={handleSubmit} className='contact-form'>
               <p className='email-form-title'>Send us an email:</p>
               <input
