@@ -9,7 +9,7 @@ import Schedule from './Components/Schedule';
 import Admin from './Components/Admin';
 import Auth from './Components/Auth';
 import Footer from './Components/Footer';
-import './App.css';
+import './Styles/App.css';
 import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
