@@ -17,7 +17,7 @@ const Home = ({ darkMode }) => {
         <section className='button-container'>
           <a
             className='home-button'
-            href='https://myfreescorenow.com/en/creditsnapshot/user/register/14852?source=default'
+            href='https://myfreescorenow.com/enroll/?AID=CREDITELITE&PID=48157'
             target='_blank'
             rel='noopener noreferrer'
           >
