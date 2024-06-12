@@ -38,8 +38,7 @@ function App() {
         <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className='content-wrap'>
           <Routes>
-            <Route path='/' element={<Navigate to='/home' replace />} />
-            <Route path='/home' element={<Home darkMode={darkMode} />} />
+            <Route path='/' element={<Home darkMode={darkMode} />} />
             <Route path='/about' element={<About darkMode={darkMode} />} />
             <Route path='/contact' element={<Contact darkMode={darkMode} />} />
             <Route path='/schedule' element={<Schedule />} />
