@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RRLogoBlack from '/src/assets/RR-logo-black.png';
-import RRLogoWhite from '/src/assets/RR-logo-white.png';
+import LPLogoBlack from '/src/assets/lp-full-black.svg';
+import LPLogoWhite from '/src/assets/lp-full-white.svg';
 
 const About = ({ darkMode }) => {
-  const currentLogo = darkMode ? RRLogoWhite : RRLogoBlack;
+  const currentLogo = darkMode ? LPLogoWhite : LPLogoBlack;
 
   return (
     <>
@@ -29,7 +29,7 @@ const About = ({ darkMode }) => {
                   credit.
                 </p>
                 <p className='about-subtitle'>
-                  At <strong>Robyn Robyn's</strong>, we engage in negotiations
+                  At <strong>LUIS PEGUERO</strong>, we engage in negotiations
                   with creditors to rectify inaccuracies on your credit report
                   and eliminate outdated information. Furthermore, we provide
                   guidance on adopting effective strategies for credit building
