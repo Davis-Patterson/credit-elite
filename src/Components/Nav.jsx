@@ -59,7 +59,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
     <>
       <div className='nav-container'>
         <div className='logo-container' id='LOGO'>
-          <Link to='/home' className='home-link'>
+          <Link to='/' className='home-link'>
             <img className='logo-img' src={logoImg} alt='Logo Img' />
           </Link>
         </div>
@@ -89,8 +89,8 @@ const Nav = ({ darkMode, setDarkMode }) => {
             style={{ display: 'none' }}
           />
           <Link
-            to='/home'
-            className={`contact-link ${isActive('/home') ? 'active' : ''}`}
+            to='/'
+            className={`contact-link ${isActive('/') ? 'active' : ''}`}
           >
             <p className='contact-link-button'>HOME</p>
           </Link>
@@ -118,8 +118,8 @@ const Nav = ({ darkMode, setDarkMode }) => {
         <div className='dropdown-menu' ref={dropdownRef}>
           <div className='dropdown-box'>
             <Link
-              to='/home'
-              className={`dropdown-link ${isActive('/home') ? 'active' : ''}`}
+              to='/'
+              className={`dropdown-link ${isActive('/') ? 'active' : ''}`}
               onClick={handleDropdown}
             >
               <p className='dropdown-link-button'>HOME</p>
