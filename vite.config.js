@@ -11,7 +11,7 @@ export default defineConfig({
       contexts: '/src/contexts',
       shared: '/src/shared',
       utilities: '/src/utilities',
-      styles: '/src/styles',
+      styles: '/src/Styles',
     },
   },
   assetsInclude: ['**/*.png', '**/*.PNG', '**/*.avi'],

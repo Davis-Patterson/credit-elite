@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoImg from '/src/assets/RR-small-white.png';
+import logoImg from '/src/assets/lp-slant-white.svg';
 import IGlogo from '/src/assets/IG_logo_white.svg';
 import MaterialUISwitch from './MaterialUISwitch';
 import DehazeIcon from '@mui/icons-material/Dehaze';

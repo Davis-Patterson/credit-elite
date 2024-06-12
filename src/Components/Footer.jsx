@@ -46,7 +46,7 @@ const Footer = ({ token, setToken }) => {
             </div>
           )}
         </div>
-        <p className='footer-text'>© Copyright 2024 ROBYN ROBYN'S SERVICES</p>
+        <p className='footer-text'>© Copyright 2024 LUIS PEGUERO</p>
       </div>
     </>
   );
