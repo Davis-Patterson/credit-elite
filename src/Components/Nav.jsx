@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logoImg from '/src/assets/lp-slant-white.svg';
-import IGlogo from '/src/assets/IG_logo_white.svg';
-import MaterialUISwitch from './MaterialUISwitch';
+import logoImg from 'assets/lp-slant-white.svg';
+import IGlogo from 'assets/IG_logo_white.svg';
+import MaterialUISwitch from 'utils/MaterialUISwitch';
 import DehazeIcon from '@mui/icons-material/Dehaze';
 
 const Nav = ({ darkMode, setDarkMode }) => {

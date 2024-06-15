@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
-import IgLogoWhite from '/src/assets/IG_logo_white.svg';
-import IgLogoBlack from '/src/assets/IG_logo_black.svg';
+import IgLogoWhite from 'assets/IG_logo_white.svg';
+import IgLogoBlack from 'assets/IG_logo_black.svg';
 
 const Contact = ({ darkMode }) => {
   const [form, setForm] = useState({

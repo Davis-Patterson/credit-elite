@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import useLocalStorageState from 'use-local-storage-state';
-import Nav from './Components/Nav';
-import Home from './Components/Home';
-import About from './Components/About';
-import Contact from './Components/Contact';
-import Schedule from './Components/Schedule';
-import Admin from './Components/Admin';
-import Auth from './Components/Auth';
-import Footer from './Components/Footer';
-import './Styles/App.css';
-import { dark } from '@mui/material/styles/createPalette';
+import Nav from 'components/Nav';
+import Home from 'components/Home';
+import About from 'components/About';
+import Contact from 'components/Contact';
+import Schedule from 'components/Schedule';
+import Admin from 'components/Admin';
+import Auth from 'components/Auth';
+import Footer from 'components/Footer';
+import 'styles/App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useLocalStorageState('darkMode', true);
