@@ -112,7 +112,7 @@ const Auth = ({}) => {
             </form>
             <div className='auth-words-link-container'>
               <div className='auth-link-words'>Click here to </div>
-              <Link to='/home' className='auth-words-link'>
+              <Link to='/' className='auth-words-link'>
                 <p className='auth-words-link-button'> return home</p>
               </Link>
               <div className='auth-link-words'>.</div>
