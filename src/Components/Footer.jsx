@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Link, useLocation } from 'react-router-dom';
 
-const Footer = ({ token, setToken }) => {
+const Footer = ({}) => {
+  const { token, setToken } = useContext(AppContext);
+
   const location = useLocation();
 
   const handleLogout = () => {
@@ -12,8 +15,8 @@ const Footer = ({ token, setToken }) => {
     <>
       <div className='footer-container' id='footer-container'>
         <div className='footer-link-container'>
-          {location.pathname !== '/home' && (
-            <Link to='/home' className='footer-link' id='footer-link'>
+          {location.pathname !== '/' && (
+            <Link to='/' className='footer-link' id='footer-link'>
               <p className='footer-link-button'>HOME</p>
             </Link>
           )}

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Auth = ({ setToken }) => {
+const Auth = ({}) => {
+  const { setToken } = useContext(AppContext);
   const [form, setForm] = useState({
     username: '',
     password: '',
