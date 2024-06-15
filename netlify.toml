@@ -1,4 +1,16 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "https://luispeguero.netlify.app/*"
+  to = "https://luispeguerojr.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://luispeguerojr.com/*"
+  to = "https://luispeguerojr.com/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
