@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import useLocalStorageState from 'use-local-storage-state';
 import Nav from 'components/Nav';
 import Home from 'components/Home';
 import About from 'components/About';
@@ -12,8 +12,7 @@ import Footer from 'components/Footer';
 import 'styles/App.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', true);
-  const [token, setToken] = useLocalStorageState('userToken', '');
+  const { setDarkMode, token } = useContext(AppContext);
 
   const ProtectedRoute = ({ children, token }) => {
     if (!token) {
@@ -34,12 +33,12 @@ function App() {
   return (
     <>
       <div className='app-container'>
-        <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Nav />
         <div className='content-wrap'>
           <Routes>
-            <Route path='/' element={<Home darkMode={darkMode} />} />
-            <Route path='/about' element={<About darkMode={darkMode} />} />
-            <Route path='/contact' element={<Contact darkMode={darkMode} />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/schedule' element={<Schedule />} />
             <Route
               path='/admin'
@@ -49,10 +48,10 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path='/authorize' element={<Auth setToken={setToken} />} />
+            <Route path='/authorize' element={<Auth />} />
           </Routes>
         </div>
-        <Footer token={token} setToken={setToken} />
+        <Footer />
       </div>
     </>
   );

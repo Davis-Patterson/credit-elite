@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import IgLogoWhite from 'assets/IG_logo_white.svg';
 import IgLogoBlack from 'assets/IG_logo_black.svg';
 
-const Contact = ({ darkMode }) => {
+const Contact = ({}) => {
+  const { darkMode } = useContext(AppContext);
+
   const [form, setForm] = useState({
     user_name: '',
     user_email: '',

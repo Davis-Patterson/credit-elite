@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Link } from 'react-router-dom';
 import LPLogoBlack from 'assets/lp-full-black.svg';
 import LPLogoWhite from 'assets/lp-full-white.svg';
 
-const Home = ({ darkMode }) => {
+const Home = ({}) => {
+  const { darkMode } = useContext(AppContext);
+
   const currentLogo = darkMode ? LPLogoWhite : LPLogoBlack;
 
   return (
@@ -55,12 +58,6 @@ const Home = ({ darkMode }) => {
           >
             <p className='home-button-text'>Build Credit</p>
           </a>
-          {/* <Link to='/contact' className='home-button'>
-            <p className='home-button-text'>Contact Us Here</p>
-          </Link> */}
-          {/* <Link to='/schedule' className='home-button'>
-            <p className='home-button-text'>Book a 1:1 Consultation Here</p>
-          </Link> */}
         </section>
       </div>
     </>

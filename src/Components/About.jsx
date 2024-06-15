@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { AppContext } from 'contexts/AppContext';
 import { Link } from 'react-router-dom';
 import LPLogoBlack from 'assets/lp-full-black.svg';
 import LPLogoWhite from 'assets/lp-full-white.svg';
 
-const About = ({ darkMode }) => {
+const About = ({}) => {
+  const { darkMode } = useContext(AppContext);
   const currentLogo = darkMode ? LPLogoWhite : LPLogoBlack;
 
   return (
