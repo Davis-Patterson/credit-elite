@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LPLogoBlack from '/src/assets/lp-full-black.svg';
-import LPLogoWhite from '/src/assets/lp-full-white.svg';
+import LPLogoBlack from 'assets/lp-full-black.svg';
+import LPLogoWhite from 'assets/lp-full-white.svg';
 
 const About = ({ darkMode }) => {
   const currentLogo = darkMode ? LPLogoWhite : LPLogoBlack;
