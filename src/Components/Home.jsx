@@ -32,7 +32,7 @@ const Home = ({}) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <p className='home-button-text'>Build Credit</p>
+            <p className='home-button-text'>Build Credit with "Self"</p>
           </a>
           <a
             className='home-button'
@@ -40,7 +40,7 @@ const Home = ({}) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <p className='home-button-text'>Build Credit</p>
+            <p className='home-button-text'>Build Credit with "Kickoff"</p>
           </a>
           <a
             className='home-button'
@@ -48,7 +48,7 @@ const Home = ({}) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <p className='home-button-text'>Build Credit</p>
+            <p className='home-button-text'>Build Credit with "Ava"</p>
           </a>
           <a
             className='home-button'
@@ -56,7 +56,9 @@ const Home = ({}) => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <p className='home-button-text'>Build Credit</p>
+            <p className='home-button-text'>
+              Build Credit with "Credit Strong"
+            </p>
           </a>
         </section>
       </div>
